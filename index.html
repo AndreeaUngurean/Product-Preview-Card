@@ -9,6 +9,10 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <title>Frontend Mentor | Product preview card component</title>
 
   <style>
@@ -53,9 +57,13 @@
 
     .card-container .image-product-container {
       flex: 1 1 0;
-      background: url("../Product-Preview-Card/images/image-product-desktop.jpg");
+      background-image: linear-gradient(120deg, transparent, rgba(209, 166, 87, 0.5)), url("../Product-Preview-Card/images/image-product-desktop.jpg");
       background-size: cover;
     }
+
+    /* .card-container .image-product-container:hover {
+      filter: sepia(50%);
+    } */
 
     .card-container .presentation-product-container .price-container h2 {
       font-family: myFont2;
@@ -70,7 +78,6 @@
 
     .card-container .presentation-product-container .price-container {
       display: flex;
-      
       margin-bottom: 35px;
     }
 
@@ -83,11 +90,23 @@
       align-self: center;
     }
 
+    .card-container .presentation-product-container .btn {
+      font-size: 0.8rem;
+      font-family: myFont1;
+      border: none;
+      outline: none;
+      padding: 15px 80px;
+      border-radius: 10px;
+      background-color: hsl(158, 36%, 37%);
+      color: white;
+      cursor: pointer;
+    }
   </style>
 
 </head>
 
 <body>
+
   <div class="card-container">
     <div class="image-product-container"></div>
     <div class="presentation-product-container">
@@ -104,7 +123,7 @@
         </div>
       </div>
       <div>
-        <button>Add to Cart</button>
+        <button class="btn"><i class="fa-solid fa-cart-shopping"></i> &nbsp Add to Cart</button>
       </div>
     </div>
   </div>
